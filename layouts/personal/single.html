@@ -1,0 +1,17 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+{{ end }}
+{{ define "footer" }}
+<hr>
+<footer>
+
+    <p>Custom footer for the personal posts page.</p>
+
+</footer>
+
+
+{{ end }}
