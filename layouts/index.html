@@ -9,13 +9,15 @@
     </title>
   </head>
   <body>
+      <p>Using index.html</p>
       <section id="section-nav">
         <a href="/personal">Personal Section</a>
       </section>
     {{ block "main" . }}
     {{ end }}
     {{ block "footer" . }}
+        <hr>
+        <p>The stock standard default footer on the home page.
     {{ end }}
   </body>
 </html>
-
