@@ -7,14 +7,21 @@
             {{ .Site.Title }}
         {{ end }}
     </title>
+    {{ partial "head.html" . }}
   </head>
   <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-3">
+                {{ partial "sidebar.html" . }}    
+              </div>
+              <div class="col-9">
+                {{ block "main" . }}
+                {{ end }}
+              </div>
+          </div>
+      </div>
       <p>Using baseof.html in _default</p>
-      <section id="section-nav">
-        <a href="/personal">Personal Section</a>
-      </section>
-    {{ block "main" . }}
-    {{ end }}
     {{ block "footer" . }}
         <hr>
         <p>The stock standard default footer on the home page.
